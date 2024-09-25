@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamer's World - About Me</title>
+    <style>
+         body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Arial', sans-serif;
+            overflow-x: hidden;
+        }
+        /* Video Background */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+            object-fit: cover; /* Ensures the video covers the entire screen */
+        }
+        /* Overlay for readability */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        body {
+            background-color: #000;
+            color: #ff002b;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        header {
+            font-family: Tangerine;
+            background-color: #111;
+            padding: 20px;
+            text-align: center;
+            font-size: 2em;
+            color: #ff0000;
+            text-shadow: 0 0 15px #ff0000;
+            animation: glow 2s infinite alternate;
+            font-weight: bolder;
+        }
+        @keyframes glow {
+            0% { text-shadow: 0 0 15px #ff0000; }
+            100% { text-shadow: 0 0 30px #ff0000; }
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        nav a {
+            color: #fff;
+            background-color: #ff0044;
+            padding: 15px 30px;
+            margin: 0 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-family: Tangerine;
+            font-weight: bold;
+            font-size: 1.2em;
+            box-shadow: 0 0 15px #ff003c;
+            transition: all 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #000;
+            color: #ff0000;
+            box-shadow: 0 0 20px #ff0000;
+            transform: scale(1.1);
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.5em;
+            margin-top: 40px;
+            color: #ff0000;
+            text-shadow: 0 0 10px #ff0000;
+            animation: fadeIn 3s ease-in-out;
+            font-family: Tangerine;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .profile {
+            text-align: center;
+            margin: 40px;
+            animation: bounce 3s ease-in-out infinite;
+        }
+        .profile img {
+            width: 16%;
+            border-radius: 10px;
+            box-shadow: 0 0 20px #ff0000;
+        }
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+        footer {
+            background-color: #000000;
+            padding: 20px;
+            text-align: center;
+            color: #ff0000;
+            text-shadow: 0 0 15px #ff0000;
+        }
+        p {
+            font-family: courgette;
+            font-size: x-large;
+            font-weight: bold;
+        }
+    #scrollButton {
+        color: #fff;
+        background-color: #ff0044;
+        padding: 15px 30px;
+         margin: 0 10px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-family: Tangerine;
+        font-weight: bold;
+        font-size: 1.2em;
+        box-shadow: 0 0 15px #ff003c;
+        transition: all 0.3s ease;
+        z-index: 1;
+    }
+    #targetSection {
+        margin: top 100vh;
+        height: 300px;
+        background-color: #ff0000;
+        color: aliceblue;
+        
+    }
+    
+    </style>
+</head>
+<body>
+    
+
+    <video autoplay muted loop class="video-background">
+        <source src="Resource/mainpage.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    
+    <!-- Overlay to darken the video and make text readable -->
+    <div class=""></div>
+
+
+    <header>
+        Faldro's World - Suraj Kumar
+    </header>
+
+    <nav>
+        <a href="https://www.instagram.com/faldrogamer/">Instagram</a>
+        <a href="games.html">Games</a>
+        <a href="https://discord.gg/JHcAR8Nj">Discord</a>
+    </nav>
+
+    <section id="about-me">
+        <h2 class="section-title">About Me</h2>
+        <div class="profile">
+            <img src="Resource/channels4_profile.jpg" alt="Gamer Image">
+            <p>Hello! I'm a Gamer who loves to play multiplayer games and a anime fan. My favorite genres are FPS and RPGs and love to compete in tournaments. You can catch me online with my friends!. A gamer Who loves anime is someone deeply immersed in both digital worlds and vibrant. Imaginative stories. they enjoy with the thrill of gaming combined with the emotional depth and aesthetic flared of anywhere Their statics of 10 lengths element of futuristic stack with colourful, dynamic characters reflect a passion for both intense gameplay and rich narrative drive and experiences.</p>
+        </div>
+    </section>
+
+    <footer>
+         © 2024 Gamer's World. All rights reserved.
+    </footer>
+    <script>
+        document.getElementById(scrollButton).addEventListener("click", function() {
+            //Scroll to the target section
+            document.getElementById("targetSection").scrollIntoView({
+                behavior:"smooth"
+            });
+            var textElement =document.getElementById("textToHighlight");
+            textElement.classList.add("highlight");
+            setTimeout(function() {
+            textElement.classList.remove ("highlight");
+            }, 2000); // 2000 milliseconds = 2 seconds
+        });
+
+    </script>
+
+</body>
+</html>
